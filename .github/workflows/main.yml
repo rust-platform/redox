@@ -68,7 +68,7 @@ jobs:
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH redox
 
     - name: pre-build 
-      run: cd redox && ./bootstrap.sh
+      run: cd redox && sudo -E ./bootstrap.sh
 
     - name: make all
-      run: cd redox/redox && make all
+      run: cd redox/redox && sudo -E make all
